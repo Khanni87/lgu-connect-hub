@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
@@ -33,15 +33,6 @@ const App = () => (
             <Route path="/complaints" element={<div className="p-6">Complaint Box - Coming Soon</div>} />
             <Route path="/settings" element={<div className="p-6">Settings - Coming Soon</div>} />
           </Route>
-          {/* External portal redirects */}
-          <Route 
-            path="/student-portal" 
-            element={<Navigate to="https://student.lgu.edu.pk" replace={true} />} 
-          />
-          <Route 
-            path="/faculty-portal" 
-            element={<Navigate to="https://e.lgu.edu.pk" replace={true} />} 
-          />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

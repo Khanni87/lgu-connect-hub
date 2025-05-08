@@ -30,12 +30,12 @@ const Header = () => {
 
           {/* Desktop navigation */}
           <nav className="hidden md:flex items-center space-x-1">
-            <Link to="/student-portal" className="nav-link px-3 py-2">
+            <a href="https://student.lgu.edu.pk" target="_blank" rel="noopener noreferrer" className="nav-link px-3 py-2">
               Student Portal
-            </Link>
-            <Link to="/faculty-portal" className="nav-link px-3 py-2">
+            </a>
+            <a href="https://e.lgu.edu.pk" target="_blank" rel="noopener noreferrer" className="nav-link px-3 py-2">
               Faculty Portal
-            </Link>
+            </a>
             <Button size="sm" variant="default">
               Log In
             </Button>
@@ -62,20 +62,24 @@ const Header = () => {
               />
             </div>
             <nav className="flex flex-col space-y-2">
-              <Link 
-                to="/student-portal" 
+              <a 
+                href="https://student.lgu.edu.pk" 
+                target="_blank" 
+                rel="noopener noreferrer" 
                 className="px-3 py-2 hover:bg-gray-50 rounded-md nav-link"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Student Portal
-              </Link>
-              <Link 
-                to="/faculty-portal" 
+              </a>
+              <a 
+                href="https://e.lgu.edu.pk" 
+                target="_blank" 
+                rel="noopener noreferrer" 
                 className="px-3 py-2 hover:bg-gray-50 rounded-md nav-link"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Faculty Portal
-              </Link>
+              </a>
               <Button size="sm" variant="default" className="w-full">
                 Log In
               </Button>
